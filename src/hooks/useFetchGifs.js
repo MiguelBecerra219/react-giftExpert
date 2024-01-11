@@ -4,9 +4,13 @@ export const useFetchGifs = (category) => {
   const [images, setImagenes] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
-  useEffect(() => {
-    getGift(category).then(newImages => setImagenes(newImages))
+  const getImages = async () => {
+    const newImages = await getGift(category)
+    setImagenes(newImages)
     setIsLoading(false)
+  }
+  useEffect(() => {
+    getImages()
   }, [])
 
   return {

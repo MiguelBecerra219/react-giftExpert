@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setinputValue] = useState('')
@@ -14,7 +15,7 @@ export const AddCategory = ({ onNewCategory }) => {
   }
 
   return (
-    <form onSubmit={onSubmit /* llamar la funcion de esta manera automaticamente pasa el evento como prop */} >
+    <form onSubmit={onSubmit /* llamar la funcion de esta manera automaticamente pasa el evento como prop */} aria-label='form' >
       <input
         type="text"
         placeholder="Buscar gift"
@@ -23,4 +24,8 @@ export const AddCategory = ({ onNewCategory }) => {
       />
     </form>
   )
+}
+
+AddCategory.proptype = {
+  onNewCategory: PropTypes.func.isRequired
 }

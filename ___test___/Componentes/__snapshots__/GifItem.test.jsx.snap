@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas al componente GifItem La renderizacion debe coincidir con el snapShop 1`] = `
+<div>
+  <article
+    class="card"
+  >
+    <h2>
+      Titulo Gif
+    </h2>
+    <img
+      alt="Titulo Gif"
+      src="https://media2.giphy.com/media/IvOFcGZeDA76P6XryO/giphy.gif?cid=377eb6f21m3n5qkuxxtw5nu6pq39v7g1s3m9imdaayx8j3yb&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+    />
+  </article>
+</div>
+`;
